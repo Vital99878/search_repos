@@ -1,0 +1,43 @@
+@import "../abstracts/variables";
+
+.search {
+
+  &__input {
+    box-sizing: border-box;
+    width: 500px;
+    height: 61px;
+    background-color: $color-white;
+    border: none;
+    padding: 0;
+    font-size: 48px;
+
+    &:focus {
+      border: none;
+      outline: none;
+      padding-left: 12px;
+    }
+  }
+
+  &__result-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &__result-item {
+    width: 500px;
+    background-color: $color-item_search_bg;
+    font-size: 30px;
+    border: 2px solid black;
+    padding-left: 13px;
+    margin: 0;
+    cursor: pointer;
+    transition: all .6s;
+
+    &:hover {
+      background-color: $color-item_search_bg--active;
+    }
+  }
+
+}
+

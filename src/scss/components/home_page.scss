@@ -1,0 +1,10 @@
+@import "../abstracts/variables";
+
+.api {
+  background-color: $color-main-bg;
+  box-sizing: border-box;
+  width: 662px;
+  min-height: 764px;
+  margin: 200px auto;
+  padding: 62px 84px 72px 74px;
+}

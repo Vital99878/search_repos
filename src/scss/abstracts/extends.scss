@@ -1,0 +1,18 @@
+%message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.primer__success  {
+  @extend %message;
+  background-color: green;
+}
+
+.primer__warning {
+  @extend %message;
+  background-color: red;
+}
+
+
+
