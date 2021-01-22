@@ -1,12 +1,16 @@
-export const nums__10 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
-export const string = 'just string';
+export let input = document.querySelector( '.search__input' )
+export const debounce = ( fn, debounceTime ) => {
+  let timeout;
 
-export function new_person ( name, age ) {
-  return {
-    name: name,
-    age: age,
+  return function () {
+    let fn_call = () => {fn.apply (this, arguments)}
+    clearTimeout (timeout)
+    timeout = setTimeout (fn_call, debounceTime)
   }
-}
+
+};
+
+
 
 
 
