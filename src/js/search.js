@@ -79,7 +79,7 @@ input.addEventListener( 'keyup', () => get_repos( ( repos ) => {
     fragment.appendChild( result_item )
   } )
   result_list.appendChild( fragment )
-}, input.value ) )
+}, input.value.trim() ) )
 
 result_list.addEventListener( 'click', ( e ) => {
   let el_index = e.target.getAttribute( 'data-index' );

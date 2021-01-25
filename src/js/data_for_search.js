@@ -23,8 +23,7 @@ export function get_repos( cb_results, search_text ) {
       result_list.removeChild( result_list.firstChild );
     }
 
-    xhr.open( 'get', `https://api.github.com/search/repositories?q=${search_text }&per_page=5&sort=stars&order=desc` )
-    console.log(search_text)
+    xhr.open( 'get', `https://api.github.com/search/repositories?q=${search_text }in:name&per_page=5&sort=stars&order=desc` )
 
     xhr.addEventListener( 'load', () => {
       const response = JSON.parse( xhr.responseText )
