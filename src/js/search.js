@@ -72,14 +72,3 @@ result_list.addEventListener( 'click', ( e ) => {
     delete_from_favorites( e )
   } )
 } )
-
-
-
-
-
-
-
-
-
-
-

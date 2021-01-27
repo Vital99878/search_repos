@@ -41,12 +41,3 @@ const debounce = ( fn, debounceTime ) => {
 };
 
 get_repos = debounce( get_repos, 500 )
-
-
-
-
-
-
-
-
-
