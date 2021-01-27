@@ -17,12 +17,14 @@ function add_item_to_favorites( el_index ) {
   let favorite_item__p_owner = document.createElement( 'p' )
   let favorite_item__p_stars = document.createElement( 'p' )
   let favorite_item__delete_button = document.createElement( 'button' )
+  let item_name = repos[ el_index ].name;
+  item_name = item_name.length > 30 ? item_name.slice( 0, 30 ) + '…' : item_name;
 
   favorite_item.classList.add( 'favorites__item' )
   favorite_item__content.classList.add( 'favorites__content' )
   favorite_item__delete_button.classList.add( 'favorites__close-button' )
   favorite_item__delete_button.classList.add( 'close-button' )
-  favorite_item__p_name.textContent = `Name: ${repos[ el_index ].name}`
+  favorite_item__p_name.textContent = `Name: ${item_name}`
   favorite_item__p_owner.textContent = `Owner: ${repos[ el_index ].owner}`
   favorite_item__p_stars.textContent = `Stars: ${repos[ el_index ].stars}`
   cash_favorites.push( repos[ el_index ].url )
@@ -57,7 +59,7 @@ input.addEventListener( 'keyup', () => get_repos( ( repos ) => {
   repos.forEach( ( repo, index ) => {
     let result_item = document.createElement( 'li' );
     result_item.classList.add( 'search__result-item' )
-    result_item.textContent = repo.name;
+    result_item.textContent = repo.name.length > 33 ? repo.name.slice( 0, 33 ) + '…' : repo.name;
     result_item.dataset.index = index
     result_item.dataset.url = repo.url
     fragment.appendChild( result_item )
